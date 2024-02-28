@@ -1,0 +1,33 @@
+.topBar {
+  height: 100px;
+  width: 80vw;
+  margin: 100px 10vw;
+  background-color: gray;
+}
+.mainBlock {
+  margin: 100px 10vw;
+  display: grid;
+  gap: 24px;
+}
+.mainBlock__displayMode {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+  width: 180px;
+}
+.mainBlock__displayMode__view {
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+}
+.mainBlock__listProducts {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.mainBlock__listProducts__specificProduct {
+  display: grid;
+  gap: 6px;
+  text-align: center;
+}/*# sourceMappingURL=listProducts.css.map */
