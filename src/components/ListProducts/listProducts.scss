@@ -29,6 +29,7 @@
         flex-wrap: wrap;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        width: 80vw;
         &__specificProduct {
             display: grid;
             gap: 6px;
