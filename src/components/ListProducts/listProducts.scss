@@ -35,6 +35,12 @@
             text-align: center;
         }
     }
+    &__listProductsColumn {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
     &__numbering {
     }
 }

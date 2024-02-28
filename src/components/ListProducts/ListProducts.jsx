@@ -4,6 +4,7 @@ import './listProducts.css';
 
 export default function listProducts() {
     const [users, setUsers] = useState([]);
+    const [style, setStyle] = useState('mainBlock__listProducts');
 
     const f = async () => {
         const res = await fetch('https://reqres.in/api/users/');
@@ -15,6 +16,12 @@ export default function listProducts() {
         f();
     }, []);
 
+    function listProducts() {
+        if (style !== 'mainBlock__listProducts')
+            setStyle('mainBlock__listProducts');
+        else setStyle('mainBlock__listProductsColumn');
+    }
+
     return (
         <>
             <div className="topBar">
@@ -25,11 +32,15 @@ export default function listProducts() {
                 <div className="mainBlock__displayMode">
                     <text>Display mode</text>
                     <div className="mainBlock__displayMode__view">
-                        <button>First view</button>
-                        <button>Second view</button>
+                        <button onClick={() => listProducts()}>
+                            First view
+                        </button>
+                        <button onClick={() => listProducts()}>
+                            Second view
+                        </button>
                     </div>
                 </div>
-                <div className="mainBlock__listProducts">
+                <div className={style}>
                     {users.length &&
                         users.map((user) => {
                             return (
