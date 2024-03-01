@@ -14,6 +14,7 @@ export default function Items({ items }) {
                                 >
                                     <div>
                                         <img
+                                            className="mainBlock__listProducts__specificProduct__img"
                                             key={item.avatar}
                                             src={item.avatar}
                                         />

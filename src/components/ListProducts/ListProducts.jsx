@@ -30,16 +30,27 @@ export default function listProducts() {
             {/* <Router> */}
             <div className="topBar">
                 <p className="topBar__searchFeed">Search feed</p>
-                <p className="topBar__validation">Validation</p>
+                <label>Choose a criteria</label>
+                <select name="criteria" className="topBar__validation">
+                    <option value="none">None</option>
+                    <option value="price">Price</option>
+                    <option value="brand">Brand</option>
+                </select>
             </div>
             <div className="mainBlock">
                 <div className="mainBlock__displayMode">
                     <p>Display mode</p>
                     <div className="mainBlock__displayMode__view">
-                        <button onClick={() => listProducts()}>
+                        <button
+                            className="mainBlock__displayMode__view__button"
+                            onClick={() => listProducts()}
+                        >
                             First view
                         </button>
-                        <button onClick={() => listProducts()}>
+                        <button
+                            className="mainBlock__displayMode__view__button"
+                            onClick={() => listProducts()}
+                        >
                             Second view
                         </button>
                     </div>

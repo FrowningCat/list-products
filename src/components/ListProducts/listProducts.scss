@@ -1,8 +1,12 @@
+$bgColor: gray;
+
 .topBar {
-    height: 100px;
+    display: grid;
+    gap: 10px;
+    height: 120px;
     width: 80vw;
     margin: 100px 10vw;
-    background-color: gray;
+    background-color: $bgColor;
     &__searchFeed {
     }
     &__validation {
@@ -18,29 +22,44 @@
         gap: 12px;
         text-align: center;
         width: 180px;
+        border: 1px solid black;
+        border-radius: 10px;
         &__view {
             display: flex;
             gap: 4px;
+            border-radius: 10px;
             justify-content: space-between;
+            &__button {
+                background: none;
+                border: 1px solid black;
+                border-radius: 10px;
+            }
         }
     }
     &__listProducts {
         display: grid;
         flex-wrap: wrap;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 130px);
         gap: 20px;
         width: 80vw;
+        justify-content: space-around;
         &__specificProduct {
+            border: 1px solid black;
+            border-radius: 20px;
             display: grid;
             gap: 6px;
             text-align: center;
+            &__img {
+                border-radius: 20px;
+            }
         }
     }
     &__listProductsColumn {
         display: grid;
         flex-wrap: wrap;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 130px);
         gap: 20px;
+        justify-content: center;
     }
     &__numbering {
     }
