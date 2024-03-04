@@ -1,10 +1,20 @@
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import Pagination from '../../Pagination/Pagination';
 
 export default function Items({ items }) {
+    const { pageNumber } = useParams();
+    const currentPage = pageNumber ? parseInt(pageNumber, 10) : 1;
+    const productsPerPage = 3;
+    const startIndex = (currentPage - 1) * productsPerPage;
+    const currentProducts = items.slice(
+        startIndex,
+        startIndex + productsPerPage
+    );
     return (
         <>
-            {items.length &&
-                items.map((item) => {
+            {currentProducts.length &&
+                currentProducts.map((item) => {
                     return (
                         <>
                             <Link to={`/items/${item.id}`}>
@@ -25,6 +35,11 @@ export default function Items({ items }) {
                         </>
                     );
                 })}
+            <Pagination
+                totalProducts={items.length}
+                productsPerPage={productsPerPage}
+                currentPage={currentPage}
+            />
         </>
     );
 }

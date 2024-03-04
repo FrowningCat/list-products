@@ -58,16 +58,21 @@ export default function listProducts() {
                 <div className={style}>
                     <Routes>
                         <Route
+                            path="/page/:pageNumber"
+                            element={<Items items={items} />}
+                        ></Route>
+                        <Route
                             path="/items/:id"
                             element={<CertainItems items={items} />}
                         ></Route>
+                        {/* productList */}
                         <Route
-                            path="*"
+                            path="/"
                             element={<Items items={items} />}
                         ></Route>
+                        {/* list */}
                     </Routes>
                 </div>
-                <button className="mainBlock__numbering">Numbering</button>
             </div>
             {/* </Router> */}
         </>
