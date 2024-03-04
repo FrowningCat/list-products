@@ -65,12 +65,10 @@ export default function listProducts() {
                             path="/items/:id"
                             element={<CertainItems items={items} />}
                         ></Route>
-                        {/* productList */}
                         <Route
                             path="/"
                             element={<Items items={items} />}
                         ></Route>
-                        {/* list */}
                     </Routes>
                 </div>
             </div>

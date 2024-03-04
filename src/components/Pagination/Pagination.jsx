@@ -1,3 +1,4 @@
+import './pagination.css';
 import { Link } from 'react-router-dom';
 
 export default function Pagination({
@@ -7,9 +8,13 @@ export default function Pagination({
 }) {
     const totalPage = Math.ceil(totalProducts / productsPerPage);
     return (
-        <div>
+        <div className="pagination">
             {Array.from({ length: totalPage }, (_, index) => (
-                <Link key={index} to={`/page/${index + 1}`}>
+                <Link
+                    key={index}
+                    to={`/page/${index + 1}`}
+                    className="pagination__number"
+                >
                     {index + 1}
                 </Link>
             ))}

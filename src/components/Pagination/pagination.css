@@ -1,0 +1,9 @@
+.pagination {
+  display: flex;
+  gap: 12px;
+  border: 1px solid black;
+  border-radius: 25px;
+  justify-content: end;
+  box-sizing: border-box;
+  padding-right: 10px;
+}/*# sourceMappingURL=pagination.css.map */
